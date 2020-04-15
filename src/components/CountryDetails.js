@@ -43,32 +43,33 @@ const CountryDetails = props => {
     variables: { code: countryCode }
   });
   return (
-    <div className='country-details'>
+    <div className='parent'>
       {loading ? (
         <p>Loading ...</p>
       ) : (
         <div>
-          <div className={classes.root}>
-            <Paper className={classes.paper}>Country {countryCode}</Paper>
-            {console.log(data)}
-            <Paper className={classes.papernd}>
-              <Paper className={classes.papernd}>
-                Name {data.country.name}{' '}
-              </Paper>
-              <Paper className={classes.papernd}>
-                Emoji {data.country.emoji}
-              </Paper>
-              <Paper className={classes.papernd}>
-                Native {data.country.native}{' '}
-              </Paper>
-              <Paper className={classes.papernd}>
-                Phone {data.country.phone}{' '}
-              </Paper>
-              <Paper className={classes.papernd}>
-                Currency {data.country.currency}
-              </Paper>
-            </Paper>
-          </div>
+          <Paper className={classes.paper}>Country {countryCode}</Paper>
+          <Paper className={classes.papernd}>
+            <div className='country-details'>
+              <div className='item'>
+                <Paper className={classes.papernd}>{data.country.name}</Paper>
+              </div>
+              <div className='item'>
+                <Paper className={classes.papernd}>{data.country.emoji}</Paper>
+              </div>
+              <div className='item'>
+                <Paper className={classes.papernd}>{data.country.native}</Paper>
+              </div>
+              <div className='item'>
+                <Paper className={classes.papernd}>{data.country.phone}</Paper>
+              </div>
+              <div className='item'>
+                <Paper className={classes.papernd}>
+                  {data.country.currency}
+                </Paper>
+              </div>
+            </div>
+          </Paper>
         </div>
       )}
     </div>
