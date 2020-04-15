@@ -35,8 +35,7 @@ const Login = props => {
       .email('Email Must be a valid Email')
       .required('Email is a required field'),
     password: yup
-      .number()
-      .integer('must be a number')
+      .string()
       .required('password is a required field')
   });
   return (
