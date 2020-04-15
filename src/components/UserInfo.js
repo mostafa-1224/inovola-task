@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
   paper: {
     padding: theme.spacing(2),
     color: 'white',
-    backgroundColor: theme.palette.text.hint,
+    backgroundColor: 'blue',
     marginBottom: 20
   },
   papernd: {
