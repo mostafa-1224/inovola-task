@@ -5,6 +5,11 @@
   box-sizing: border-box;
   font-family: 'Roboto';
 }
+.parent {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+}
 .form {
   width: 60%;
   margin: auto;
@@ -23,4 +28,10 @@
   width: 95%;
   margin: auto;
   margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.country-details .item {
+  width: 48%;
 }
